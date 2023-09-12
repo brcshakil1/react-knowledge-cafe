@@ -12,9 +12,9 @@ const Blogs = () => {
     },[])
 
     return (
-        <div>
-            Blogs
-        </div>
+        <header className="md:w-2/3">
+            <h1>Blogs</h1>
+        </header>
     );
 };
 

@@ -8,15 +8,19 @@ const Bookmarks = ({bookmarks, readingTime}) => {
             <h2 className='text-2xl p-2 border-2 rounded-md mx-2.5 border-purple-700'>Spend time on read: {readingTime} min</h2>
             <h2 className='text-2xl p-2'>Bookmarks Blogs: {bookmarks.length}</h2>
             {
-                bookmarks.map(bookmark => <Bookmark key={bookmark.id} bookmark={bookmark} readingTime={readingTime}></Bookmark>)
+                bookmarks.map((bookmark, idx) => <Bookmark 
+                                            key={idx} 
+                                            bookmark={bookmark} 
+                                            readingTime={readingTime}
+                                            ></Bookmark>)
             }
         </div>
     );
 };
 
 Bookmarks.propTypes = {
-    bookmarks: PropTypes.array.inRequired,
-    readingTime: PropTypes.func.inRequired,
+    bookmarks: PropTypes.array,
+    readingTime: PropTypes.number,
 }
 
 export default Bookmarks;
